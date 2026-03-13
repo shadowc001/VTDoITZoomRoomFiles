@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafana TV Zoom Wrapper</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #111217;
+        }
+        
+        .grafana-frame {
+            /* 100 / 1.45 = 68.965vw/vh */
+            width: 68.965vw; 
+            height: 68.965vh;
+            
+            /* Scale by 1.45x (145%) */
+            transform: scale(1.45);
+            transform-origin: top left;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe 
+        class="grafana-frame" 
+        src="https://dashboard.arc.vt.edu/d/aebgykyg0apkwe/arc-cluster-utilization-tv?orgId=1&from=now-7d&to=now&timezone=browser&var-datasource=$__all&var-department=$__all&refresh=1m&kiosk=true" 
+        title="ARC Cluster Dashboard">
+    </iframe>
+</body>
+</html>
